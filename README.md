@@ -4,9 +4,10 @@
 
 The shellescape Python module defines the `shellescape.quote()` function that returns a shell-escaped version of a Python string.  This is a backport of the `shlex.quote()` function from Python 3.4.3 that makes it accessible to users of Python 3 versions < 3.3 and all Python 2.x versions.
 
-From the Python documentation:
 
 ### quote()
+
+*From the Python documentation*:
 
 Return a shell-escaped version of the string s. The returned value is a string that can safely be used as one token in a shell command line, for cases where you cannot use a list.
 
