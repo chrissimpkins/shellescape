@@ -42,8 +42,8 @@ setup(
     keywords='shell,quote,escape,backport,command line,command,subprocess',
     include_package_data=True,
     classifiers=[
-        'Development Status :: 5 - Production/Stable'
-        'Intended Audience :: Developers'
+        'Development Status :: 5 - Production/Stable',
+        'Intended Audience :: Developers',
         'Natural Language :: English',
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python',
