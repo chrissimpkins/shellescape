@@ -30,7 +30,7 @@ def version_read():
 setup(
     name='shellescape',
     version=version_read(),
-    description='Shell escape a string to safely use it as a token in a shell command (backport of Python shlex.quote for Python versions < 3.3)',
+    description='Shell escape a string to safely use it as a token in a shell command (backport of Python shlex.quote for Python versions 2.x & < 3.3)',
     long_description=(docs_read('README.rst')),
     url='https://github.com/chrissimpkins/shellescape',
     license='MIT license',
