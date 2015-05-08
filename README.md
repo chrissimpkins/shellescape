@@ -1,9 +1,8 @@
 # shellescape
 
+## Description
+
 The shellescape Python module defines the `shellescape.quote()` function that returns a shell-escaped version of a Python string.  This is a backport of the `shlex.quote()` function from Python 3.4.3 that makes it accessible to users of Python 3 versions < 3.3 and all Python 2.x versions.
-
-
-## Usage
 
 From the Python documentation:
 
@@ -41,3 +40,31 @@ The quoting is compatible with UNIX shells and with `shlex.split()`:
 >>> command
 ['ls', '-l', 'somefile; rm -rf ~']
 ```
+
+
+## Usage
+
+Include `shellescape` in your setup.py file `install_requires` list:
+
+```python
+setup(
+    ...
+    install_requires=['shellescape'],
+    ...
+)
+```
+
+Then import the `quote` function into your module(s) and use it as needed:
+
+```python
+from shellescape import quote
+
+shell_command = "ls -l somefile; rm -rf ~"
+escaped_shell_command = quote(shell_command)
+```
+
+## License
+
+[LICENSE](https://github.com/chrissimpkins/shellescape/blob/master/docs/LICENSE)
+
+
