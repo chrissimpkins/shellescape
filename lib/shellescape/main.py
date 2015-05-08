@@ -1,6 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+import re
+
+
 _find_unsafe = re.compile(r'[^\w@%+=:,./-]', re.ASCII).search
 
 def quote(s):
