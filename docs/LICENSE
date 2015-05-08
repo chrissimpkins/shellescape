@@ -22,11 +22,19 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
 
-
 SUMMARY OF CHANGES
 
-The Python 3.4.3 function `quote` from the `shlex` module (`shlex.quote()`) was backported without source code modification to the module shellescape in order to provide access to this function in earlier versions of Python.
+The Python 3.4.3 function `quote` from the `shlex` module (`shlex.quote()`) was backported in order to provide access
+to this function in earlier versions of Python.  The regular expression used to identify unsafe command line strings
+was modified to:
 
+_find_unsafe = re.compile(r'[a-zA-Z0-9_^@%+=:,./-]').search
+
+from:
+
+_find_unsafe = re.compile(r'[^\w@%+=:,./-]', re.ASCII).search
+
+in order to remove the re.ASCII flag which is not available in the Python 2.x re module
 
 
 
