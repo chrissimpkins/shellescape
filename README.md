@@ -45,7 +45,7 @@ The quoting is compatible with UNIX shells and with `shlex.split()`:
 
 ## Usage
 
-Include `shellescape` in your setup.py file `install_requires` dependency definition list:
+Include `shellescape` in your project setup.py file `install_requires` dependency definition list:
 
 ```python
 setup(

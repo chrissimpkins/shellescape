@@ -1,12 +1,12 @@
 Source Repository: https://github.com/chrissimpkins/shellescape
 
 Description
--------------
+-----------
 
 The shellescape Python module defines the ``shellescape.quote()`` function that returns a shell-escaped version of a Python string.  This is a backport of the ``shlex.quote()`` function from Python 3.4.3 that makes it accessible to users of Python 3 versions < 3.3 and all Python 2.x versions.
 
 quote()
----------
+-------
 
 From the Python documentation:
 
@@ -47,9 +47,9 @@ The quoting is compatible with UNIX shells and with ``shlex.split()``:
 
 
 Usage
------------
+-----
 
-Include ``shellescape`` in your setup.py file ``install_requires`` dependency definition list:
+Include ``shellescape`` in your project setup.py file ``install_requires`` dependency definition list:
 
 .. code-block:: python
 
@@ -74,7 +74,7 @@ Then import the ``quote`` function into your module(s) and use it as needed:
 
 
 Issue Reporting
--------------------
+---------------
 
 Issue reporting is available on the `GitHub repository <https://github.com/chrissimpkins/shellescape/issues>`_
 
