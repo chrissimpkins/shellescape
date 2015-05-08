@@ -44,7 +44,7 @@ The quoting is compatible with UNIX shells and with `shlex.split()`:
 
 ## Usage
 
-Include `shellescape` in your setup.py file `install_requires` list:
+Include `shellescape` in your setup.py file `install_requires` dependency definition list:
 
 ```python
 setup(
@@ -57,6 +57,9 @@ setup(
 Then import the `quote` function into your module(s) and use it as needed:
 
 ```python
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 from shellescape import quote
 
 shell_command = "ls -l somefile; rm -rf ~"
