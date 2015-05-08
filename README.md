@@ -1,6 +1,6 @@
 # shellescape
 
-The shellescape module defines the `shellescape.quote()` function that returns a shell-escaped version of a Python string.  This is a backport of the `shlex.quote()` function from Python 3.4.3 that makes it accessible to users of Python 3 versions < 3.3 and all Python 2.x versions.
+The shellescape Python module defines the `shellescape.quote()` function that returns a shell-escaped version of a Python string.  This is a backport of the `shlex.quote()` function from Python 3.4.3 that makes it accessible to users of Python 3 versions < 3.3 and all Python 2.x versions.
 
 
 ## Usage
@@ -20,7 +20,7 @@ This idiom would be unsafe:
 ls -l somefile; rm -rf ~
 ```
 
-quote() lets you plug the security hole:
+`quote()` lets you plug the security hole:
 
 ```python
 >>> command = 'ls -l {}'.format(quote(filename))
