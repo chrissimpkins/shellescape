@@ -69,8 +69,8 @@ Then import the ``quote`` function into your module(s) and use it as needed:
 
 	from shellescape import quote
 
-	shell_command = "ls -l somefile; rm -rf ~"
-	escaped_shell_command = quote(shell_command)
+	filename = "somefile; rm -rf ~"
+	escaped_shell_command = 'ls -l {}'.format(quote(filename))
 
 
 Issue Reporting
