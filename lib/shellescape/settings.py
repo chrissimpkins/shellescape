@@ -10,6 +10,6 @@ app_name = 'shellescape'
 # Version Number
 # ------------------------------------------------------------------------------
 major_version = "3"
-minor_version = "4"
-patch_version = "2"
+minor_version = "8"
+patch_version = "0"
 
