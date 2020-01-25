@@ -9,9 +9,9 @@ def docs_read(fname):
 
 def version_read():
     settings_file = open(os.path.join(os.path.dirname(__file__), 'lib', 'shellescape', 'settings.py')).read()
-    major_regex = """major_version\s*?=\s*?["']{1}(\d+)["']{1}"""
-    minor_regex = """minor_version\s*?=\s*?["']{1}(\d+)["']{1}"""
-    patch_regex = """patch_version\s*?=\s*?["']{1}(\d+)["']{1}"""
+    major_regex = r"""major_version\s*?=\s*?["']{1}(\d+)["']{1}"""
+    minor_regex = r"""minor_version\s*?=\s*?["']{1}(\d+)["']{1}"""
+    patch_regex = r"""patch_version\s*?=\s*?["']{1}(\d+)["']{1}"""
     major_match = re.search(major_regex, settings_file)
     minor_match = re.search(minor_regex, settings_file)
     patch_match = re.search(patch_regex, settings_file)
