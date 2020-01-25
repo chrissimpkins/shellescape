@@ -1,10 +1,7 @@
 import os
 import re
+import sys
 from setuptools import setup, find_packages
-
-
-def docs_read(fname):
-    return open(os.path.join(os.path.dirname(__file__), 'docs', fname)).read()
 
 
 def version_read():
@@ -27,11 +24,25 @@ def version_read():
     return major_version + "." + minor_version + "." + patch_version
 
 
+# Use repository Markdown README.md for PyPI long description
+try:
+    with open("README.md", "r") as f:
+        readme = f.read()
+except IOError as readme_e:
+    sys.stderr.write(
+        "[ERROR] setup.py: Failed to read the README.md file for the long description definition: {}".format(
+            str(readme_e)
+        )
+    )
+    raise readme_e
+
+
 setup(
     name='shellescape',
     version=version_read(),
-    description='Shell escape a string to safely use it as a token in a shell command (backport of Python shlex.quote for Python versions 2.x & < 3.3)',
-    long_description=(docs_read('README.rst')),
+    description='Shell escape a string to safely use it as a token in a shell command (backport of cPython shlex.quote for Python versions 2.x & < 3.3)',
+    long_description=readme,
+    long_description_content_type="text/markdown",
     url='https://github.com/chrissimpkins/shellescape',
     license='MIT license',
     author='Christopher Simpkins',
